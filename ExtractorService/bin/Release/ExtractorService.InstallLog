@@ -1,0 +1,13 @@
+﻿Installing assembly 'C:\Users\Juan\VisualStudioProjects\ExtractorBioGim\ExtractorService\bin\Release\ExtractorService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\Juan\VisualStudioProjects\ExtractorBioGim\ExtractorService\bin\Release\ExtractorService.InstallLog
+   assemblypath = C:\Users\Juan\VisualStudioProjects\ExtractorBioGim\ExtractorService\bin\Release\ExtractorService.exe
+Installing service ExtractorService...
+Service ExtractorService has been successfully installed.
+Creating EventLog source ExtractorService in log Application...
+Committing assembly 'C:\Users\Juan\VisualStudioProjects\ExtractorBioGim\ExtractorService\bin\Release\ExtractorService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\Juan\VisualStudioProjects\ExtractorBioGim\ExtractorService\bin\Release\ExtractorService.InstallLog
+   assemblypath = C:\Users\Juan\VisualStudioProjects\ExtractorBioGim\ExtractorService\bin\Release\ExtractorService.exe
