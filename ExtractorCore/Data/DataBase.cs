@@ -1,4 +1,4 @@
-﻿using ExtractorFacturero.Core.Data.DTO;
+using ExtractorFacturero.Core.Data.DTO;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -28,11 +28,10 @@ namespace ExtractorFacturero.Core.Data
         {
             try
             {
-                Console.WriteLine("[DEBUG] Inicializando DataBase...");
                 this.connectionString = ConfigurationManager.ConnectionStrings["SISTEMA"].ConnectionString;
-                Console.WriteLine($"[DEBUG] Connection string obtenido: {connectionString}");
+                //Console.WriteLine($"[DEBUG] Connection string obtenido: {connectionString}");
                 this.conn = new SqlConnection(connectionString);
-                Console.WriteLine("[DEBUG] SqlConnection creado exitosamente");
+                //Console.WriteLine("[DEBUG] SqlConnection creado exitosamente");
             }
             catch (Exception ex)
             {
@@ -50,18 +49,18 @@ namespace ExtractorFacturero.Core.Data
         {
             try
             {
-                Console.WriteLine($"[DEBUG] Estado actual de conexión: {conn.State}");
-                Console.WriteLine($"[DEBUG] Connection String: {connectionString}");
+                //Console.WriteLine($"[DEBUG] Estado actual de conexión: {conn.State}");
+                //Console.WriteLine($"[DEBUG] Connection String: {connectionString}");
                 
                 if (conn.State != ConnectionState.Open)
                 {
-                    Console.WriteLine("[DEBUG] Intentando abrir conexión...");
+                    //Console.WriteLine("[DEBUG] Intentando abrir conexión...");
                     this.conn.Open();
-                    Console.WriteLine($"[DEBUG] Conexión abierta exitosamente. Estado: {conn.State}");
+                    //Console.WriteLine($"[DEBUG] Conexión abierta exitosamente. Estado: {conn.State}");
                 }
                 else
                 {
-                    Console.WriteLine("[DEBUG] La conexión ya estaba abierta");
+                    //Console.WriteLine("[DEBUG] La conexión ya estaba abierta");
                 }
             }
             catch (SqlException sqlEx)
@@ -165,7 +164,7 @@ namespace ExtractorFacturero.Core.Data
 
         private List<DocumentDTO> ReadDocumentDTOResultSet(SqlCommand cmd, bool isPendingNotes = false)
         {
-            Console.WriteLine($"[DEBUG] Ejecutando ReadDocumentDTOResultSet, timeout: {cmd.CommandTimeout}s");
+            //Console.WriteLine($"[DEBUG] Ejecutando ReadDocumentDTOResultSet, timeout: {cmd.CommandTimeout}s");
             List<DocumentDTO> documents = new List<DocumentDTO>();
             using (SqlDataReader reader = cmd.ExecuteReader())
             {
@@ -217,20 +216,20 @@ namespace ExtractorFacturero.Core.Data
         {
             try
             {
-                Console.WriteLine("[DEBUG] Iniciando FindAllPendingDocuments()");
+                //Console.WriteLine("[DEBUG] Iniciando FindAllPendingDocuments()");
                 OpenIfNotYet();
-                Console.WriteLine("[DEBUG] Conexión abierta, ejecutando consulta SQL");
+                //Console.WriteLine("[DEBUG] Conexión abierta, ejecutando consulta SQL");
 
                 using (SqlCommand cmd = new SqlCommand(R_ALL_PENDING_DOCUMENTS, conn))
                 {
                     cmd.CommandTimeout = 240; // 2 minutos de timeout
-                    Console.WriteLine($"[DEBUG] Ejecutando query: {R_ALL_PENDING_DOCUMENTS} (Timeout: {cmd.CommandTimeout}s)");
+                    //Console.WriteLine($"[DEBUG] Ejecutando query: {R_ALL_PENDING_DOCUMENTS} (Timeout: {cmd.CommandTimeout}s)");
                     
                     var startTime = DateTime.Now;
                     var result = ReadDocumentDTOResultSet(cmd, false);
                     var endTime = DateTime.Now;
                     
-                    Console.WriteLine($"[DEBUG] Query ejecutada exitosamente en {(endTime - startTime).TotalSeconds:F2} segundos, {result.Count} documentos encontrados");
+                    //Console.WriteLine($"[DEBUG] Query ejecutada exitosamente en {(endTime - startTime).TotalSeconds:F2} segundos, {result.Count} documentos encontrados");
                     return result;
                 }
             }

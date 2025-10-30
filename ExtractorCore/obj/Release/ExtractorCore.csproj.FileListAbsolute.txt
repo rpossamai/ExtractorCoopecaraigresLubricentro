@@ -31,3 +31,16 @@ C:\Users\Juan\VisualStudioProjects\ExtractorMikail\ExtractorCore\bin\Release\Res
 C:\Users\Juan\VisualStudioProjects\ExtractorMikail\ExtractorCore\obj\Release\ExtractorCore.dll
 C:\Users\Juan\VisualStudioProjects\ExtractorMikail\ExtractorCore\obj\Release\ExtractorCore.pdb
 C:\Users\Juan\VisualStudioProjects\ExtractorMikail\ExtractorCore\obj\Release\ExtractorCore.csprojResolveAssemblyReference.cache
+C:\Users\ricar\proyectos\Facturero\ExtractorCoopecaraigresLubricentro\ExtractorCore\bin\Release\ExtractorCore.dll
+C:\Users\ricar\proyectos\Facturero\ExtractorCoopecaraigresLubricentro\ExtractorCore\bin\Release\ExtractorCore.pdb
+C:\Users\ricar\proyectos\Facturero\ExtractorCoopecaraigresLubricentro\ExtractorCore\bin\Release\log4net.dll
+C:\Users\ricar\proyectos\Facturero\ExtractorCoopecaraigresLubricentro\ExtractorCore\bin\Release\Newtonsoft.Json.dll
+C:\Users\ricar\proyectos\Facturero\ExtractorCoopecaraigresLubricentro\ExtractorCore\bin\Release\RestSharp.dll
+C:\Users\ricar\proyectos\Facturero\ExtractorCoopecaraigresLubricentro\ExtractorCore\bin\Release\log4net.xml
+C:\Users\ricar\proyectos\Facturero\ExtractorCoopecaraigresLubricentro\ExtractorCore\bin\Release\Newtonsoft.Json.xml
+C:\Users\ricar\proyectos\Facturero\ExtractorCoopecaraigresLubricentro\ExtractorCore\bin\Release\RestSharp.xml
+C:\Users\ricar\proyectos\Facturero\ExtractorCoopecaraigresLubricentro\ExtractorCore\obj\Release\ExtractorCore.csproj.AssemblyReference.cache
+C:\Users\ricar\proyectos\Facturero\ExtractorCoopecaraigresLubricentro\ExtractorCore\obj\Release\ExtractorCore.csproj.CoreCompileInputs.cache
+C:\Users\ricar\proyectos\Facturero\ExtractorCoopecaraigresLubricentro\ExtractorCore\obj\Release\Extracto.85CF1113.Up2Date
+C:\Users\ricar\proyectos\Facturero\ExtractorCoopecaraigresLubricentro\ExtractorCore\obj\Release\ExtractorCore.dll
+C:\Users\ricar\proyectos\Facturero\ExtractorCoopecaraigresLubricentro\ExtractorCore\obj\Release\ExtractorCore.pdb

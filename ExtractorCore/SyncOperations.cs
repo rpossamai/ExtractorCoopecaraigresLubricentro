@@ -141,7 +141,7 @@ namespace ExtractorFacturero.Core
                 List<DocumentDTO> pendingDocuments = db.FindAllPendingDocuments();
                 if (pendingDocuments.Count > 0)
                 {
-                    //WriteEventLogEntry("Se encontraron {0} documentos pendientes por enviar", pendingDocuments.Count);
+                    WriteEventLogEntry("Se encontraron {0} documentos pendientes por enviar", pendingDocuments.Count);
                     
                     PostDocuments(db, pendingDocuments);
                 }
@@ -157,8 +157,8 @@ namespace ExtractorFacturero.Core
                 db.CreateDocumentTribunetControl(pendingDocument.ControlNumber, pendingDocument.IssuedAt, pendingDocument.TypeCode);
                 
                 var request = GetDocumentRequestFromDocumentDTO(DocumentDTOCleanser(pendingDocument));
-                Console.WriteLine("[DEBUG] JSON Request:");
-                Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(request, Newtonsoft.Json.Formatting.Indented));
+                //Console.WriteLine("[DEBUG] JSON Request:");
+                //Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(request, Newtonsoft.Json.Formatting.Indented));
                 var response = API.PostDocument(request);
                
                 db.UpdateDocumentTribunetControlWithStatus(request.ControlNumber, (int)response.StatusCode);
@@ -340,7 +340,7 @@ namespace ExtractorFacturero.Core
                     Amount = source.TaxAmount,
                     Rate = source.TaxRate,
                     TypeCode = "01",
-                    VatTaxRateCode = "08"
+					VatTaxRateCode = "08"
                 }
             };
             return target;
